@@ -121,3 +121,7 @@ a {
     text-decoration: none;
 }
 /* card play button css ends */
+
+.show-albums:hover {
+    color: black!important;
+}
