@@ -1,10 +1,11 @@
 const toggleAlbums = (e) => {
     let cardSection = e.target.parentNode.childNodes[5]
-    console.log(cardSection.childNodes[3].classList)
-    if('d-none' in cardSection.childNodes[3].classList) {
-        console.log('d-none')
+    if(Array.from(cardSection.childNodes[1].classList).includes('d-none')) {
+        cardSection.childNodes[1].classList.remove('d-none')
+        cardSection.childNodes[3].classList.add('d-none')
     } else {
-        console.log('d')
+        cardSection.childNodes[1].classList.add('d-none')
+        cardSection.childNodes[3].classList.remove('d-none')
     }
 }
 
