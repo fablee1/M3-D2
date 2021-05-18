@@ -1,3 +1,9 @@
+let uniqueAlbumsCount = 0
+
+const logAlbums = () => {
+    console.log(uniqueAlbumsCount)
+}
+
 const toggleAlbums = (e) => {
     let cardSection = e.target.parentNode.childNodes[5]
     if(Array.from(cardSection.childNodes[1].classList).includes('d-none')) {
@@ -37,6 +43,7 @@ const generateSection = (data) => {
     }
 
     for(album in uniqueAlbums) {
+        uniqueAlbumsCount ++
         album = uniqueAlbums[album]
         let card = document.createElement('div')
         card.classList.add('col-sm-6', 'col-md-3', 'col-lg-2')
